@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #5E2C27; /* Deep brown */
+    font-family: 'Arial', sans-serif;
+}
+
+.links-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background: rgba(244, 227, 219, 0.12); /* More beige tint */
+    padding: 50px 70px;
+    border-radius: 25px;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.4),
+                inset 0 0 30px rgba(244, 227, 219, 0.1); /* Subtle beige inner glow */
+    backdrop-filter: blur(10px);
+    text-align: center;
+    max-width: 90%;
+    width: 350px;
+    border: 1px solid rgba(244, 227, 219, 0.4);
+}
+
+.links-container a {
+    text-decoration: none;
+    color: #F4E3DB; /* Soft beige */
+    font-size: 1.2rem;
+    padding: 14px 24px;
+    border: 2px solid rgba(244, 227, 219, 0.5);
+    border-radius: 40px;
+    transition: all 0.3s ease;
+    background: rgba(244, 227, 219, 0.05);
+}
+
+.links-container a:hover {
+    background: rgba(244, 227, 219, 0.2);
+    transform: scale(1.05);
+    color: #FFFFFF;
+    border-color: rgba(244, 227, 219, 0.7);
+}
+
+/* Responsive Tweaks */
+@media (max-width: 480px) {
+    .links-container {
+        padding: 30px 20px;
+        width: 90%;
+    }
+
+    .links-container a {
+        font-size: 1rem;
+        padding: 10px 15px;
+    }
+}
