@@ -6,60 +6,76 @@
 
 html, body {
     height: 100%;
-    overflow: hidden;
-}
-
-body {
+    font-family: 'Georgia', serif;
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #5E2C27; /* Deep brown */
-    font-family: 'Arial', sans-serif;
+    background: url('/images/FRATELLILOGO.png') no-repeat center center fixed;
+    background-size: cover;
+    overflow: hidden;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(30, 15, 10, 0.8);
+    z-index: 0;
 }
 
 .links-container {
+    position: relative;
+    z-index: 1;
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    background: rgba(244, 227, 219, 0.12); /* More beige tint */
-    padding: 50px 70px;
-    border-radius: 25px;
-    box-shadow: 0 12px 40px rgba(0,0,0,0.4),
-                inset 0 0 30px rgba(244, 227, 219, 0.1); /* Subtle beige inner glow */
-    backdrop-filter: blur(10px);
+    gap: 16px;
+    background: rgba(244, 227, 219, 0.06);
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3),
+                inset 0 0 20px rgba(244, 227, 219, 0.1);
+    backdrop-filter: blur(8px);
     text-align: center;
-    max-width: 90%;
-    width: 350px;
-    border: 1px solid rgba(244, 227, 219, 0.4);
+    max-width: 350px;
+    width: 100%;
+    border: 1px solid rgba(244, 227, 219, 0.2);
 }
 
 .links-container a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap; /* Prevent line break */
+    
     text-decoration: none;
-    color: #F4E3DB; /* Soft beige */
-    font-size: 1.2rem;
-    padding: 14px 24px;
-    border: 2px solid rgba(244, 227, 219, 0.5);
-    border-radius: 40px;
+    color: #F4E3DB;
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    border: 1.5px solid rgba(244, 227, 219, 0.4);
+    border-radius: 30px;
     transition: all 0.3s ease;
-    background: rgba(244, 227, 219, 0.05);
+    background: rgba(244, 227, 219, 0.04);
 }
+
 
 .links-container a:hover {
     background: rgba(244, 227, 219, 0.2);
-    transform: scale(1.05);
     color: #FFFFFF;
+    transform: translateY(-2px) scale(1.03);
     border-color: rgba(244, 227, 219, 0.7);
+    
 }
 
 /* Responsive Tweaks */
 @media (max-width: 480px) {
     .links-container {
-        padding: 30px 20px;
+        padding: 20px 20px;
         width: 90%;
     }
 
     .links-container a {
         font-size: 1rem;
-        padding: 10px 15px;
+        padding: 8px 14px;
     }
 }
